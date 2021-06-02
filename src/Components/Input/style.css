@@ -2,8 +2,7 @@
   display: inline-block;
 }
 
-input,
-select {
+input {
   display: block;
   background: transparent;
   width: 15rem;
@@ -11,7 +10,7 @@ select {
   margin: 0.4rem 0.5rem;
   border: none;
   border-bottom: 1.5px solid #333333;
-  color: white;
+  color: #333333;
   font-size: 1.2rem;
   outline: none;
 }

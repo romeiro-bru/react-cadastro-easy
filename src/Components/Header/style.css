@@ -1,8 +1,13 @@
-h1,
-h2 {
-  color: #52c9b4;
+h1 {
+  color: #502250;
   font-size: 1.5rem;
 }
+
+h2 {
+  color: #fabb15;
+  font-size: 1rem;
+}
+
 h1 img {
   width: 1.8rem;
   margin: 0px 0px -8px 10px;
