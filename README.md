@@ -1,16 +1,15 @@
-## Day Seven / 30 days of React challenge / Animal Shelter
+## Day Eleven / 30 days of React challenge / 
 
-<p  align="center">
-<img  src="https://media.giphy.com/media/xT1R9WBeRzL9BS3wxq/giphy.gif"  height="180" alt="dog">
-</p>
+### Desafio :unicorn: 
+Seu objetivo é criar um simples app que deve conter duas páginas, uma que exibe um formulário com os campos abaixo, e outra que liste os dados cadastrados.
 
-## Features :unicorn: 
-* Register a recently rescued animal in the shelter
-* Fill in the input fields with information about the animal
+* Nome completo
+* CPF
+* Telefone
+* Email
+
 
 ## Technologies :mag_right:
 * React :sparkles:
 * Css :nail_care:
 
-#
-Inspired on: [“Vet Log”](https://github.com/graceaveris/React.js_vet_log) 
