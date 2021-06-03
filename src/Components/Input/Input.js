@@ -24,7 +24,7 @@ export function Input() {
             <label
               for="inputId"
               className="floating-label"
-              data-content="Nome Completo"
+              data-content="Nome Completo (sem abreviações)"
             >
               <span className="hidden-visually">Nome Completo</span>
             </label>

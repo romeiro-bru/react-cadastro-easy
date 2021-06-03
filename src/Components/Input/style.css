@@ -11,9 +11,8 @@ input {
   border: none;
   border-bottom: 1.5px solid #333333;
   color: #333333;
-  font-weight: 500;
+  font-weight: 600;
   outline: none;
-  text-align: left;
 }
 
 button {
@@ -49,7 +48,7 @@ button:hover {
   max-height: 0;
   font-weight: 500;
   pointer-events: none;
-  right: 6rem;
+  right: 1.8rem;
 }
 
 .floating-label::before {
