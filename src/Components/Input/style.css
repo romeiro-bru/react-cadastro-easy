@@ -1,22 +1,19 @@
 .form {
   display: inline-block;
+  margin-top: 1.5rem;
 }
 
 input {
   display: block;
-  background: transparent;
-  width: 15rem;
-  padding: 8px 5px;
+  width: 20rem;
+  padding: 5px 5px;
   margin: 0.4rem 0.5rem;
   border: none;
   border-bottom: 1.5px solid #333333;
   color: #333333;
-  font-size: 1.2rem;
+  font-weight: 500;
   outline: none;
-}
-
-input::placeholder {
-  color: #d4d4d4;
+  text-align: left;
 }
 
 button {
@@ -34,4 +31,83 @@ button {
 
 button:hover {
   background: #5ed9cb;
+}
+
+/* //// Floating Input //// */
+.floating {
+  margin-bottom: 2rem;
+  caret-color: #52c9b4;
+}
+
+.floating-input::placeholder {
+  color: #00000000;
+}
+
+.floating-label {
+  display: block;
+  position: relative;
+  max-height: 0;
+  font-weight: 500;
+  pointer-events: none;
+  right: 6rem;
+}
+
+.floating-label::before {
+  color: #939393;
+  content: attr(data-content);
+  display: inline-block;
+  filter: blur(0);
+  backface-visibility: hidden;
+  transform-origin: left top;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.floating-label::after {
+  bottom: 1rem;
+  content: "";
+  height: 0.1rem;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  opacity: 0;
+  margin-top: -0.1rem;
+  transform: scale3d(0, 1, 1);
+  width: 100%;
+}
+
+.floating-input:focus + .floating-label::after {
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+
+.floating-input:placeholder-shown + .floating-label::before {
+  transform: translate3d(0, -2.2rem, 0) scale3d(1, 1, 1);
+}
+
+.floating-label::before,
+.floating-input:focus + .floating-label::before {
+  transform: translate3d(0, -3.12rem, 0) scale3d(0.82, 0.82, 1);
+}
+
+.floating-input:focus + .floating-label::before {
+  color: #d4d4d4;
+}
+
+/* ---------------------------------------------- */
+/* --  Codepen styles & resets - not required  -- */
+/* ---------------------------------------------- */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+.hidden-visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import "./style.css";
 
 export function Input() {
@@ -13,10 +13,66 @@ export function Input() {
     <>
       <section className="form">
         <form onSubmit={handleSubmit}>
-          <input placeholder=" Nome completo" required></input>
-          <input placeholder=" E-mail" required></input>
-          <input placeholder=" CPF" required></input>
-          <input placeholder=" Telefone" required></input>
+          <div className="floating">
+            <input
+              id="fullname"
+              className="floating-input"
+              name="fullname"
+              placeholder="Nome completo"
+              required
+            ></input>
+            <label
+              for="inputId"
+              className="floating-label"
+              data-content="Nome Completo"
+            >
+              <span className="hidden-visually">Nome Completo</span>
+            </label>
+          </div>
+
+          <div className="floating">
+            <input
+              className="floating-input"
+              name="email"
+              placeholder="E-mail"
+              required
+            ></input>
+            <label
+              for="inputId"
+              className="floating-label"
+              data-content="E-mail"
+            >
+              <span className="hidden-visually">E-mail</span>
+            </label>
+          </div>
+
+          <div className="floating">
+            <input
+              className="floating-input"
+              name="cpf"
+              placeholder="CPF"
+              required
+            ></input>
+            <label for="inputId" className="floating-label" data-content="CPF">
+              <span className="hidden-visually">CPF</span>
+            </label>
+          </div>
+
+          <div className="floating">
+            <input
+              className="floating-input"
+              name="phone"
+              placeholder="Telefone"
+              required
+            ></input>
+            <label
+              for="inputId"
+              className="floating-label"
+              data-content="Telefone"
+            >
+              <span className="hidden-visually">Telefone</span>
+            </label>
+          </div>
 
           <button type="submit">Cadastrar</button>
         </form>
