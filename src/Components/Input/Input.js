@@ -67,6 +67,7 @@ export function Input() {
               className="floating-input"
               name="phone"
               placeholder="Telefone"
+              maxLength="11"
               required
             ></input>
             <label
