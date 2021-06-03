@@ -23,7 +23,7 @@ export function Input() {
             ></input>
             <label
               for="inputId"
-              className="floating-label"
+              className="floating-label fullname-label"
               data-content="Nome Completo (sem abreviações)"
             >
               <span className="hidden-visually">Nome Completo</span>
@@ -39,7 +39,7 @@ export function Input() {
             ></input>
             <label
               for="inputId"
-              className="floating-label"
+              className="floating-label email-label"
               data-content="E-mail"
             >
               <span className="hidden-visually">E-mail</span>
@@ -53,7 +53,11 @@ export function Input() {
               placeholder="CPF"
               required
             ></input>
-            <label for="inputId" className="floating-label" data-content="CPF">
+            <label
+              for="inputId"
+              className="floating-label cpf-label"
+              data-content="CPF"
+            >
               <span className="hidden-visually">CPF</span>
             </label>
           </div>
@@ -67,7 +71,7 @@ export function Input() {
             ></input>
             <label
               for="inputId"
-              className="floating-label"
+              className="floating-label phone-label"
               data-content="Telefone"
             >
               <span className="hidden-visually">Telefone</span>
