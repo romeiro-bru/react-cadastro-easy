@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-export function Register({ register }) {
+export function User({ register }) {
   return (
     <>
       <ul>

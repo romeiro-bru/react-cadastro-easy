@@ -1,5 +1,5 @@
 import React from "react";
-import { Register } from "../Register/Register";
+import { User } from "../User/User";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./style.css";
@@ -125,7 +125,7 @@ export function Input() {
       </section>
 
       <section className="register-data">
-        <Register register={register} />
+        <User register={register} />
       </section>
     </>
   );
