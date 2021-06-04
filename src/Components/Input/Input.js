@@ -9,7 +9,7 @@ const url = "https://private-21e8de-rafaellucio.apiary-mock.com/users";
 export function Input() {
   const [users, setUsers] = useState([]);
   const [inputs, setInputs] = useState({});
-  const [userData, setUserData] = useState(users);
+  const [register, setRegister] = useState(users);
 
   useEffect(() => {
     axios
@@ -25,12 +25,12 @@ export function Input() {
 
   const handleInputChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
-    console.log(e.target.value, inputs);
+    // console.log(e.target.value, inputs);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUserData([...userData, inputs]);
+    setRegister([...register, inputs]);
 
     e.target.reset();
     setInputs({
@@ -39,7 +39,7 @@ export function Input() {
       cpf: "",
       phone: ""
     });
-    console.log(userData);
+    console.log(register);
   };
 
   return (
@@ -50,7 +50,7 @@ export function Input() {
             <input
               id="fullname"
               className="floating-input"
-              value={userData.name}
+              value={register.name}
               name="name"
               onChange={handleInputChange}
               placeholder="Nome completo"
@@ -68,7 +68,7 @@ export function Input() {
           <div className="floating">
             <input
               className="floating-input"
-              value={userData.email}
+              value={register.email}
               name="email"
               onChange={handleInputChange}
               placeholder="E-mail"
@@ -86,7 +86,7 @@ export function Input() {
           <div className="floating">
             <input
               className="floating-input"
-              value={userData.cpf}
+              value={register.cpf}
               name="cpf"
               onChange={handleInputChange}
               placeholder="CPF"
@@ -104,7 +104,7 @@ export function Input() {
           <div className="floating">
             <input
               className="floating-input"
-              value={userData.phone}
+              value={register.phone}
               name="phone"
               onChange={handleInputChange}
               placeholder="Telefone"
@@ -125,7 +125,7 @@ export function Input() {
       </section>
 
       <section className="register-data">
-        <Register userData={userData} />
+        <Register register={register} />
       </section>
     </>
   );

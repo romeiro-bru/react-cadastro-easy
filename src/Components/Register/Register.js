@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css";
 
-export function Register({ userData }) {
+export function Register({ register }) {
   return (
     <>
       <ul>
-        {userData.map((item, index) => (
+        {register.map((item, index) => (
           <li key={index}>
             <p>{item.name}</p>
             <p>{item.email}</p>
