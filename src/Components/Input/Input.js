@@ -1,20 +1,27 @@
 import React from "react";
 import { Register } from "../Register/Register";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./style.css";
 
-const response = [
-  {
-    name: "My name 1",
-    cpf: "04080757247",
-    phone: "11987654321",
-    email: "myemail1@test.com.br"
-  }
-];
+const url = "https://private-21e8de-rafaellucio.apiary-mock.com/users";
 
 export function Input() {
+  const [users, setUsers] = useState([]);
   const [inputs, setInputs] = useState({});
-  const [userData, setUserData] = useState(response);
+  const [userData, setUserData] = useState(users);
+
+  useEffect(() => {
+    axios
+      .get(url)
+      .then((res) => {
+        setUsers(res.data);
+        // console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
 
   const handleInputChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
