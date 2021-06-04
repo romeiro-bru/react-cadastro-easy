@@ -1,12 +1,12 @@
 import "./styles.css";
-import { Header } from "./Components/Header/Header";
-import { Input } from "./Components/Input/Input";
+import { Header } from "./components/Header/Header";
+import { Home } from "./pages/Home/home";
 
 export default function App() {
   return (
     <div className="App">
       <Header />
-      <Input />
+      <Home />
     </div>
   );
 }
