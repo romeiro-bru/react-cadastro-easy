@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles.css";
 import { Header } from "./components/Header/Header";
-import { Home } from "./pages/Home/home";
-import { UserRegister } from "./pages/UserRegister/userRegister";
+import { Home } from "./pages/Home/index";
+import { UserRegister } from "./pages/UserRegister/index";
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
             <Home />
           </Route>
 
-          <Route path="/userRegister">
+          <Route path="/userregister">
             <UserRegister />
           </Route>
         </div>
