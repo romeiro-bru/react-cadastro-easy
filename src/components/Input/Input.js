@@ -1,21 +1,21 @@
 import React from "react";
-import { User } from "../User/User";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./style.css";
 
 const url = "https://private-21e8de-rafaellucio.apiary-mock.com/users";
+const storeData = [];
 
 export function Input() {
-  const [users, setUsers] = useState([]);
+  const [reponse, setResponse] = useState([]);
   const [inputs, setInputs] = useState({});
-  const [register, setRegister] = useState(users);
+  const [userData, setUserData] = useState(reponse);
 
   useEffect(() => {
     axios
       .get(url)
       .then((res) => {
-        setUsers(res.data);
+        setResponse(res.data);
         // console.log(res);
       })
       .catch((err) => {
@@ -25,12 +25,11 @@ export function Input() {
 
   const handleInputChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
-    // console.log(e.target.value, inputs);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setRegister([...register, inputs]);
+    setUserData([...userData, inputs]);
 
     e.target.reset();
     setInputs({
@@ -39,7 +38,10 @@ export function Input() {
       cpf: "",
       phone: ""
     });
-    console.log(register);
+
+    // salvar no localstorage
+    storeData.push(inputs);
+    localStorage.setItem("storeData", JSON.stringify(storeData));
   };
 
   return (
@@ -50,7 +52,7 @@ export function Input() {
             <input
               id="fullname"
               className="floating-input"
-              value={register.name}
+              value={userData.name}
               name="name"
               onChange={handleInputChange}
               placeholder="Nome completo"
@@ -68,7 +70,7 @@ export function Input() {
           <div className="floating">
             <input
               className="floating-input"
-              value={register.email}
+              value={userData.email}
               name="email"
               onChange={handleInputChange}
               placeholder="E-mail"
@@ -86,7 +88,7 @@ export function Input() {
           <div className="floating">
             <input
               className="floating-input"
-              value={register.cpf}
+              value={userData.cpf}
               name="cpf"
               onChange={handleInputChange}
               placeholder="CPF"
@@ -104,7 +106,7 @@ export function Input() {
           <div className="floating">
             <input
               className="floating-input"
-              value={register.phone}
+              value={userData.phone}
               name="phone"
               onChange={handleInputChange}
               placeholder="Telefone"
@@ -122,10 +124,6 @@ export function Input() {
 
           <button type="submit">Cadastrar</button>
         </form>
-      </section>
-
-      <section className="register-data">
-        <User register={register} />
       </section>
     </>
   );

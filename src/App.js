@@ -10,13 +10,8 @@ export default function App() {
       <Switch>
         <div className="App">
           <Header />
-          <Route exact path="/">
-            <Home />
-          </Route>
-
-          <Route path="/userregister">
-            <UserRegister />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route path="/userregister" component={UserRegister} />
         </div>
       </Switch>
     </Router>

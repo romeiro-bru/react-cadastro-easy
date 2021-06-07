@@ -1,9 +1,12 @@
 import React from "react";
 import "./style.css";
 
-export function User({ register }) {
+export function User() {
+  const storedData = localStorage.getItem("storeData");
+  const register = JSON.parse(storedData);
+
   return (
-    <>
+    <section className="user-data">
       <ul>
         {register.map((item, index) => (
           <li key={index}>
@@ -14,6 +17,6 @@ export function User({ register }) {
           </li>
         ))}
       </ul>
-    </>
+    </section>
   );
 }
