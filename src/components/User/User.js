@@ -10,10 +10,10 @@ export function User() {
       <ul>
         {register.map((item, index) => (
           <li key={index}>
-            <p>{item.name}</p>
-            <p>{item.email}</p>
-            <p>{item.cpf}</p>
-            <p>{item.phone}</p>
+            <p>Nome Completo: {item.name}</p>
+            <p>E-mail: {item.email}</p>
+            <p>CPF: {item.cpf}</p>
+            <p>Telefone: {item.phone}</p>
           </li>
         ))}
       </ul>

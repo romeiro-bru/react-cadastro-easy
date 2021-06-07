@@ -1,3 +1,14 @@
+.user-data {
+  display: inline-block;
+}
+
 .user-data li {
+  width: 20rem;
+  padding-left: 1rem;
   list-style: none;
+  text-align: left;
+  font-weight: normal;
+  color: #333333;
+  border-right: 1px solid #d2d2d2;
+  border-left: 1px solid #d2d2d2;
 }
