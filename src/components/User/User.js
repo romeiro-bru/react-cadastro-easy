@@ -8,7 +8,7 @@ export function User() {
   const history = useHistory();
 
   const handleRemove = () => {
-    localStorage.clear();
+    localStorage.removeItem("storeData");
     history.push("/");
   };
 
