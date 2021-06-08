@@ -63,7 +63,7 @@ export function Input() {
               required
             ></input>
             <label
-              for="inputId"
+              htmlFor="inputId"
               className="floating-label fullname-label"
               data-content="Nome Completo (sem abreviações)"
             >
