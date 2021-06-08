@@ -81,7 +81,7 @@ export function Input() {
               required
             ></input>
             <label
-              for="inputId"
+              htmlFor="inputId"
               className="floating-label email-label"
               data-content="E-mail"
             >
@@ -99,7 +99,7 @@ export function Input() {
               required
             ></input>
             <label
-              for="inputId"
+              htmlFor="inputId"
               className="floating-label cpf-label"
               data-content="CPF"
             >
