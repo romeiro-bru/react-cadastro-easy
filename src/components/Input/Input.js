@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router";
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./style.css";
 
@@ -11,6 +11,7 @@ export function Input() {
   const [reponse, setResponse] = useState([]);
   const [inputs, setInputs] = useState({});
   const [userData, setUserData] = useState(reponse);
+  const history = useHistory();
 
   useEffect(() => {
     axios
@@ -43,6 +44,8 @@ export function Input() {
     // salvar no localstorage
     storeData.push(inputs);
     localStorage.setItem("storeData", JSON.stringify(storeData));
+
+    history.push("/userregister");
   };
 
   return (
