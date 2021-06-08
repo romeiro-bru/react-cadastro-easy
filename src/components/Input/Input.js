@@ -126,7 +126,9 @@ export function Input() {
             </label>
           </div>
 
-          <button type="submit">Cadastrar</button>
+          <button className="button-register" type="submit">
+            Cadastrar
+          </button>
         </form>
       </section>
     </>

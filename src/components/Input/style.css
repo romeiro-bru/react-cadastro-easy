@@ -16,7 +16,7 @@ input {
   outline: none;
 }
 
-button {
+.button-register {
   width: 20rem;
   padding: 0.7rem 3rem;
   margin: 3rem 0;
@@ -30,8 +30,8 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
-  background: #5ed9cb;
+.button-register :hover {
+  opacity: 70%;
 }
 
 /* //// Floating Input //// */
