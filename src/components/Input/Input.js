@@ -118,7 +118,7 @@ export function Input() {
               required
             ></input>
             <label
-              for="inputId"
+              htmlFor="inputId"
               className="floating-label phone-label"
               data-content="Telefone"
             >

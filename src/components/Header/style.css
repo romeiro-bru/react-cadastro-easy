@@ -1,3 +1,9 @@
+.header {
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
 h1 {
   color: #502250;
   font-size: 1.3rem;
