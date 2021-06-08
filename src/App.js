@@ -6,14 +6,14 @@ import { UserRegister } from "./pages/UserRegister/index";
 
 export default function App() {
   return (
-    <Router>
-      <Header />
-      <div className="App">
+    <div className="App">
+      <Router>
+        <Header />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/userregister" component={UserRegister} />
         </Switch>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
