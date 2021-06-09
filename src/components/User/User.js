@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import "./style.css";
 
 export function User() {
-  const storedData = JSON.parse(localStorage.getItem("storeData")) || [];
+  const storedData = JSON.parse(localStorage.getItem("storeData"));
   const history = useHistory();
 
   const handleRemove = () => {

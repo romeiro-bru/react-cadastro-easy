@@ -16,6 +16,8 @@ input {
   outline: none;
 }
 
+/* //// buttons //// */
+
 .button-register {
   width: 20rem;
   padding: 0.7rem 3rem;
@@ -32,6 +34,12 @@ input {
 
 .button-register :hover {
   opacity: 70%;
+}
+
+button:disabled,
+button[disabled] {
+  background: #f6f6f6;
+  color: #dddcdc;
 }
 
 /* //// Floating Input //// */
