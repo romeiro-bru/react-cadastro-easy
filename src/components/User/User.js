@@ -3,8 +3,7 @@ import { useHistory } from "react-router-dom";
 import "./style.css";
 
 export function User() {
-  const storedData = localStorage.getItem("storeData");
-  const register = JSON.parse(storedData);
+  const storedData = JSON.parse(localStorage.getItem("storeData")) || [];
   const history = useHistory();
 
   const handleRemove = () => {
@@ -15,7 +14,7 @@ export function User() {
   return (
     <section className="user-data">
       <ul>
-        {register.map((item, index) => (
+        {storedData.map((item, index) => (
           <li key={index}>
             <p>
               <strong>{item.name}</strong>
