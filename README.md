@@ -6,4 +6,5 @@ O objetivo é criar um simples app que deve conter duas páginas, uma que exibe 
 ### Technologies :mag_right:
 * React :sparkles:
 * Css :nail_care:
+* LocalStorage :notebook:
 
