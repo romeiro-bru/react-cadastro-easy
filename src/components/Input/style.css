@@ -4,6 +4,18 @@
   font-family: "Questrial";
 }
 
+.spin {
+  font-size: 1.5rem;
+  margin-top: 1px;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 input {
   display: block;
   width: 20rem;
@@ -34,6 +46,10 @@ input {
 
 .button-register :hover {
   opacity: 70%;
+}
+
+.load {
+  padding: 0.4rem 3rem;
 }
 
 button:disabled,

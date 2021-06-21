@@ -1,53 +1,45 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./style.css";
+import { AiOutlineLoading } from "react-icons/ai";
 
 const url = "https://private-21e8de-rafaellucio.apiary-mock.com/users";
-const storeData = [];
 
 export function Input() {
-  const [reponse, setResponse] = useState([]);
   const [inputs, setInputs] = useState({});
-  const [userData, setUserData] = useState(reponse);
+  const [response, setResponse] = useState([]);
   const history = useHistory();
 
   useEffect(() => {
-    axios
-      .get(url)
-      .then((res) => {
-        setResponse(res.data);
-        // console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  });
+    async function x() {
+      const response = await axios.get(url);
+      setResponse(response.data);
+    }
+    x();
+  }, []);
 
-  const handleInputChange = (e) => {
-    setInputs({ ...inputs, [e.target.name]: e.target.value });
-  };
+  useEffect(() => {
+    console.log("oi");
+    localStorage.setItem("storeData", JSON.stringify(response));
+  }, [response]);
+
+  const handleInputChange = useCallback(
+    (e) => {
+      setInputs({ ...inputs, [e.target.name]: e.target.value });
+    },
+    [inputs]
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUserData([...userData, inputs]);
-
-    e.target.reset();
-    setInputs({
-      name: "",
-      email: "",
-      cpf: "",
-      phone: ""
-    });
-
+    setResponse([...response, inputs]);
     // salvar no localstorage
-    storeData.push(inputs);
-    localStorage.setItem("storeData", JSON.stringify(storeData));
-
-    history.push("/userregister");
+    setTimeout(() => {
+      history.push("/userregister");
+    }, 2000);
   };
-
+  // const x = useMemo(() => localStorage.getItem("storeData") !== null, []);
   return (
     <>
       <section className="form">
@@ -56,7 +48,7 @@ export function Input() {
             <input
               id="fullname"
               className="floating-input"
-              value={userData.name}
+              value={response.name}
               name="name"
               onChange={handleInputChange}
               placeholder="Nome completo"
@@ -74,7 +66,7 @@ export function Input() {
           <div className="floating">
             <input
               className="floating-input"
-              value={userData.email}
+              value={response.email}
               name="email"
               onChange={handleInputChange}
               placeholder="E-mail"
@@ -92,7 +84,7 @@ export function Input() {
           <div className="floating">
             <input
               className="floating-input"
-              value={userData.cpf}
+              value={response.cpf}
               name="cpf"
               onChange={handleInputChange}
               placeholder="CPF"
@@ -110,7 +102,7 @@ export function Input() {
           <div className="floating">
             <input
               className="floating-input"
-              value={userData.phone}
+              value={response.phone}
               name="phone"
               onChange={handleInputChange}
               placeholder="Telefone"
@@ -126,9 +118,13 @@ export function Input() {
             </label>
           </div>
 
-          <button disabled={false} className="button-register" type="submit">
+          <button className="button-register" type="submit">
             Cadastrar
           </button>
+          {/* <button className="button-register load">
+            {" "}
+            <AiOutlineLoading className="spin" />
+          </button> */}
         </form>
       </section>
     </>
