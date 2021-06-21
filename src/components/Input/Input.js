@@ -33,12 +33,11 @@ export function Input() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setResponse([...response, inputs]);
-    // salvar no localstorage
     setTimeout(() => {
       history.push("/userregister");
     }, 2000);
   };
-  // const x = useMemo(() => localStorage.getItem("storeData") !== null, []);
+
   return (
     <>
       <section className="form">
@@ -117,7 +116,11 @@ export function Input() {
             </label>
           </div>
 
-          <button className="button-register" type="submit">
+          <button
+            disabled={response.length > 3}
+            className="button-register"
+            type="submit"
+          >
             Cadastrar
           </button>
           {/* <button className="button-register load">
