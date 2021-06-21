@@ -20,7 +20,6 @@ export function Input() {
   }, []);
 
   useEffect(() => {
-    console.log("oi");
     localStorage.setItem("storeData", JSON.stringify(response));
   }, [response]);
 

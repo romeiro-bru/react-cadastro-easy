@@ -4,15 +4,12 @@ import "./style.css";
 
 export function User() {
   const [data, setData] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
-    const ls = JSON.parse(localStorage.getItem("storeData"));
-    console.log(3, data);
-    ls !== null ? setData(ls) : setData("");
+    const ls = JSON.parse(localStorage.getItem("storeData"))[3];
+    ls !== null ? setData([ls]) : setData("");
   }, []);
-
-  // const storedData = JSON.parse(localStorage.getItem("storeData"));
-  const history = useHistory();
 
   const handleRemove = () => {
     localStorage.removeItem("storeData");
