@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import "./style.css";
+import "./style.scss";
 
 export function User() {
   const [data, setData] = useState([]);

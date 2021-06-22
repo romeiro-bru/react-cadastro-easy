@@ -1,0 +1,144 @@
+.form {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: "Questrial";
+
+  input {
+    display: block;
+    width: 20rem;
+    padding: 5px 5px;
+    margin: 0.6rem 0.5rem;
+    border: none;
+    border-bottom: 1.49px solid var(--input-text-color);
+    color: var(--input-text-color);
+    font-weight: 600;
+    outline: none;
+  }
+  .spin {
+    font-size: 1.5rem;
+    margin-top: 1px;
+    animation: spin 1s infinite linear;
+  }
+
+  .button-register {
+    width: 20rem;
+    padding: 0.7rem 3rem;
+    margin: 3rem 0;
+    border: none;
+    border-radius: 20px;
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    outline: none;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 70%;
+    }
+  }
+
+  .load {
+    padding: 0.4rem 3rem;
+  }
+
+  button:disabled,
+  button[disabled] {
+    background: var(--button-disabled-color);
+    color: var(--button-disabled-text);
+  }
+
+  /* //// Floating Input //// */
+  .floating {
+    margin-bottom: 2rem;
+    caret-color: var(--primary-color);
+  }
+
+  .floating-input::placeholder {
+    color: var(--floating-placeholder);
+  }
+
+  .floating-label {
+    display: block;
+    position: relative;
+    max-height: 0;
+    font-weight: 500;
+    pointer-events: none;
+  }
+
+  .fullname-label::before {
+    right: 2rem;
+  }
+  .email-label::before {
+    right: 8.5rem;
+  }
+  .cpf-label::before {
+    right: 8.9rem;
+  }
+  .phone-label::before {
+    right: 8rem;
+  }
+
+  .floating-label::before {
+    color: var(--floating-label);
+    content: attr(data-content);
+    display: inline-block;
+    filter: blur(0);
+    backface-visibility: hidden;
+    transform-origin: left top;
+    transition: transform 0.2s ease;
+    position: relative;
+  }
+
+  .floating-label::after {
+    bottom: 1rem;
+    content: "";
+    height: 0.1rem;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    opacity: 0;
+    margin-top: -0.1rem;
+    transform: scale3d(0, 1, 1);
+    width: 100%;
+  }
+
+  .floating-input:focus + .floating-label::after {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+
+  .floating-input:placeholder-shown + .floating-label::before {
+    transform: translate3d(0, -2.2rem, 0) scale3d(1, 1, 1);
+  }
+
+  .floating-label::before,
+  .floating-input:focus + .floating-label::before {
+    transform: translate3d(0, -3.12rem, 0) scale3d(0.82, 0.82, 1);
+  }
+
+  .floating-input:focus + .floating-label::before {
+    color: var(--floating-input-focus);
+  }
+
+  /* apply a natural box layout model to all elements, but allowing components to change */
+
+  .hidden-visually {
+    border: 0;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+

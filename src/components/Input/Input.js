@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import "./style.css";
+import "./style.scss";
 import { AiOutlineLoading } from "react-icons/ai";
 
 const url = "https://private-21e8de-rafaellucio.apiary-mock.com/users";

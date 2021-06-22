@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Questrial&family=Roboto&display=swap");
+
+:root {
+  --primary-color: #52c9b4;
+  --title-color: #502250;
+  --input-text-color: #333333;
+  --delete-color: #e85b8c;
+  --button-disabled-color: #f6f6f6;
+  --button-disabled-text: #dddcdc;
+  --floating-placeholder: #00000000;
+  --floating-label: #939393;
+  --floating-input-focus: #d4d4d4;
+}
+
+body {
+  background: white;
+
+  .App {
+    font-family: "Lato";
+    text-align: center;
+    font-weight: bold;
+  }
+}
