@@ -9,6 +9,7 @@ const url = "https://private-21e8de-rafaellucio.apiary-mock.com/users";
 export function Input() {
   const [inputs, setInputs] = useState({});
   const [response, setResponse] = useState([]);
+  const [hideSpin, setHideSpin] = useState(true);
   const history = useHistory();
 
   useEffect(() => {
@@ -34,8 +35,11 @@ export function Input() {
     e.preventDefault();
     setResponse([...response, inputs]);
     setTimeout(() => {
+      setHideSpin(false);
+    }, 1000);
+    setTimeout(() => {
       history.push("/userregister");
-    }, 2000);
+    }, 2500);
   };
 
   return (
@@ -118,15 +122,16 @@ export function Input() {
 
           <button
             disabled={response.length > 3}
+            hidden={hideSpin === false}
             className="button-register"
             type="submit"
           >
             Cadastrar
           </button>
-          {/* <button className="button-register load">
+          <button hidden={hideSpin} className="button-register load">
             {" "}
             <AiOutlineLoading className="spin" />
-          </button> */}
+          </button>
         </form>
       </section>
     </>
