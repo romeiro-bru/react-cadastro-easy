@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import "./style.scss";
+import { Header } from "../Header/Header";
+import "../../assets/styles/user.scss";
 
 export function User() {
   const [data, setData] = useState([]);
@@ -16,22 +17,25 @@ export function User() {
     history.push("/");
   };
   return (
-    <section className="user-data">
-      <ul>
-        {data.map((item, index) => (
-          <li key={index}>
-            <p>
-              <strong>{item.name}</strong>
-            </p>
-            <p>{item.email}</p>
-            <p>{item.cpf}</p>
-            <p>{item.phone}</p>
-          </li>
-        ))}
-        <button onClick={handleRemove} className="button-delete">
-          Excluir cadastro
-        </button>
-      </ul>
-    </section>
+    <>
+      <Header />
+      <section className="user-data">
+        <ul>
+          {data.map((item, index) => (
+            <li key={index}>
+              <p>
+                <strong>{item.name}</strong>
+              </p>
+              <p>{item.email}</p>
+              <p>{item.cpf}</p>
+              <p>{item.phone}</p>
+            </li>
+          ))}
+          <button onClick={handleRemove} className="button-delete">
+            Excluir cadastro
+          </button>
+        </ul>
+      </section>
+    </>
   );
 }

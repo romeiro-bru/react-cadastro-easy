@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { useHistory } from "react-router-dom";
+import { Header } from "../Header/Header";
 import axios from "axios";
-import "./style.scss";
+import "../../assets/styles/input.scss";
 import { AiOutlineLoading } from "react-icons/ai";
 
 const url = "https://private-21e8de-rafaellucio.apiary-mock.com/users";
@@ -44,6 +45,7 @@ export function Input() {
 
   return (
     <>
+      <Header />
       <section className="form">
         <form onSubmit={handleSubmit}>
           <div className="floating">
