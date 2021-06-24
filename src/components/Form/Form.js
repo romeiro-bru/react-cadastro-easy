@@ -59,12 +59,9 @@ export function Form() {
             required
           ></input>
           <label
-            htmlFor="inputId"
             className="floating-label fullname-label"
             data-content="Nome Completo (sem abreviações)"
-          >
-            <span className="hidden-visually">Nome Completo</span>
-          </label>
+          ></label>
         </div>
 
         <div className="floating">
@@ -77,12 +74,9 @@ export function Form() {
             required
           ></input>
           <label
-            htmlFor="inputId"
             className="floating-label email-label"
             data-content="E-mail"
-          >
-            <span className="hidden-visually">E-mail</span>
-          </label>
+          ></label>
         </div>
 
         <div className="floating">
@@ -95,12 +89,9 @@ export function Form() {
             required
           ></input>
           <label
-            htmlFor="inputId"
             className="floating-label cpf-label"
             data-content="CPF"
-          >
-            <span className="hidden-visually">CPF</span>
-          </label>
+          ></label>
         </div>
 
         <div className="floating">
@@ -114,12 +105,9 @@ export function Form() {
             required
           ></input>
           <label
-            htmlFor="inputId"
             className="floating-label phone-label"
             data-content="Telefone"
-          >
-            <span className="hidden-visually">Telefone</span>
-          </label>
+          ></label>
         </div>
 
         <button
