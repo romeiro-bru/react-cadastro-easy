@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./styles.scss";
+import "./assets/styles/main.scss";
 import { Input } from "./components/Input/Input";
 import { User } from "./components/User/User";
 
