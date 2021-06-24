@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles.scss";
-import { Home } from "./pages/Home/index";
+import { Input } from "./components/Input/Input";
 import { User } from "./components/User/User";
 
 export default function App() {
@@ -8,7 +8,7 @@ export default function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Input} />
           <Route path="/userregister" component={User} />
         </Switch>
       </Router>
