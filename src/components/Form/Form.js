@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 import { Header } from "../Header/Header";
 import axios from "axios";
-import "../../assets/styles/form.scss";
+import "./style.scss";
 import { AiOutlineLoading } from "react-icons/ai";
 
 const url = "https://private-21e8de-rafaellucio.apiary-mock.com/users";
@@ -57,7 +57,7 @@ export function Form() {
             onChange={handleInputChange}
             placeholder="Nome completo"
             required
-          ></input>
+          />
           <label
             className="floating-label fullname-label"
             data-content="Nome Completo (sem abreviações)"
@@ -72,7 +72,7 @@ export function Form() {
             onChange={handleInputChange}
             placeholder="E-mail"
             required
-          ></input>
+          />
           <label
             className="floating-label email-label"
             data-content="E-mail"
@@ -87,7 +87,7 @@ export function Form() {
             onChange={handleInputChange}
             placeholder="CPF"
             required
-          ></input>
+          />
           <label
             className="floating-label cpf-label"
             data-content="CPF"
@@ -103,7 +103,7 @@ export function Form() {
             placeholder="Telefone"
             maxLength="11"
             required
-          ></input>
+          />
           <label
             className="floating-label phone-label"
             data-content="Telefone"

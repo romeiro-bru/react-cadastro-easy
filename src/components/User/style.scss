@@ -1,33 +1,51 @@
 .user-data {
   display: inline-block;
   margin-top: 1.5rem;
+
+  ul {
+    text-align: left;
+  }
+  li {
+    width: 20rem;
+    padding-left: 1rem;
+    list-style: none;
+    font-weight: normal;
+    color: var(--input-text-color);
+    border-right: 1px solid var(--floating-input-focus);
+    border-left: 1px solid var(--floating-input-focus);
+  }
+
+  .button-delete {
+    margin: 1rem 0;
+    border: none;
+    background: transparent;
+    color: var(--delete-color);
+    font-size: 0.9rem;
+    outline: none;
+    transition: 0.3s;
+    font-family: "Questrial";
+      &:hover {
+        opacity: 70%;
+      }
+  }  
+
+  .button-return {
+    margin: 1rem 0;
+    width: 20rem;
+    padding: 0.7rem 3rem;
+    border: 1px solid #502250;
+    border-radius: 20px;
+    background: transparent;
+    color: #502250;
+    font-size: 0.9rem;
+    outline: none;
+    transition: 0.3s;
+    font-family: "Questrial";
+      &:hover {
+        opacity: 70%;
+      }
+  }
 }
 
-.user-data ul {
-  text-align: left;
-}
 
-.user-data li {
-  width: 20rem;
-  padding-left: 1rem;
-  list-style: none;
-  font-weight: normal;
-  color: var(--input-text-color);
-  border-right: 1px solid var(--floating-input-focus);
-  border-left: 1px solid var(--floating-input-focus);
-}
 
-.button-delete {
-  margin: 1rem 0;
-  border: none;
-  background: transparent;
-  color: var(--delete-color);
-  font-size: 0.9rem;
-  outline: none;
-  transition: 0.3s;
-  font-family: "Questrial";
-}
-
-.button-delete:hover {
-  opacity: 70%;
-}

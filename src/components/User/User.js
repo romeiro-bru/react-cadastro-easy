@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Header } from "../Header/Header";
-import "../../assets/styles/user.scss";
+import "./style.scss";
 
 export function User() {
   const [data, setData] = useState([]);
   const history = useHistory();
 
   useEffect(() => {
-    const ls = JSON.parse(localStorage.getItem("storeData"))[3];
-    ls !== null ? setData([ls]) : setData("");
+    const ls = JSON.parse(localStorage.getItem("storeData"));
+    ls !== null ? setData(ls) : setData("");
   }, []);
 
   const handleRemove = () => {
     localStorage.removeItem("storeData");
     history.push("/");
   };
+
+  const handleReturn = () => {
+    history.push("/");
+  };
+
   return (
     <>
       <Header />
@@ -35,6 +40,9 @@ export function User() {
             Excluir cadastro
           </button>
         </ul>
+        <button onClick={handleReturn} className="button-return">
+          voltar
+        </button>
       </section>
     </>
   );
