@@ -11,6 +11,7 @@ form {
     border: none;
     border-bottom: 1.49px solid var(--input-text-color);
     color: var(--input-text-color);
+    caret-color: var(--primary-color);
     font-weight: 600;
     outline: none;
   }
@@ -51,7 +52,6 @@ form {
   /* //// Floating Input //// */
   .floating {
     margin-bottom: 2rem;
-    caret-color: var(--primary-color);
   }
 
   .floating-input::placeholder {

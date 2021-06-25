@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./assets/styles/main.scss";
+import "./styles.scss";
 import { Form } from "./components/Form/Form";
 import { User } from "./components/User/User";
 
