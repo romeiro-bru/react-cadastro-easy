@@ -11,9 +11,9 @@ export function User() {
     ls !== null ? setData(ls) : setData("");
   }, []);
 
-  const handleRemove = (itemIndex) => {
+  const handleRemove = (index) => {
     const list = JSON.parse(localStorage.getItem("storeData"));
-    const filtered = list.filter((_, index) => index !== itemIndex);
+    const filtered = list.filter((_, i) => i !== index);
     localStorage.setItem("storeData", JSON.stringify(filtered));
 
     data.length === 1 && history.push("/");
