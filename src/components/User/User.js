@@ -12,8 +12,8 @@ export function User() {
   }, []);
 
   const handleRemove = (itemIndex) => {
-    const items = JSON.parse(localStorage.getItem("storeData"));
-    const filtered = items.filter((_, index) => index !== itemIndex);
+    const list = JSON.parse(localStorage.getItem("storeData"));
+    const filtered = list.filter((_, index) => index !== itemIndex);
     localStorage.setItem("storeData", JSON.stringify(filtered));
 
     data.length === 1 && history.push("/");
