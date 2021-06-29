@@ -14,8 +14,7 @@ export function Form() {
 
   useEffect(() => {
     const initVal = JSON.parse(localStorage.getItem("storeData"));
-
-    if (initVal.length === 0) {
+    if (initVal === null) {
       async function x() {
         const response = await axios.get(url);
         setResponse(response.data);
