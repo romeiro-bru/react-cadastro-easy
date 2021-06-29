@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
 import { useHistory } from "react-router-dom";
-import { Header } from "../Header/Header";
 import axios from "axios";
 import "./style.scss";
 import { AiOutlineLoading } from "react-icons/ai";
@@ -14,16 +13,17 @@ export function Form() {
   const history = useHistory();
 
   useEffect(() => {
-    async function x() {
-      const response = await axios.get(url);
-      setResponse(response.data);
-    }
-    x();
-  }, []);
+    const initVal = JSON.parse(localStorage.getItem("storeData"));
 
-  useEffect(() => {
-    localStorage.setItem("storeData", JSON.stringify(response));
-  }, [response]);
+    if (initVal.length === 0) {
+      async function x() {
+        const response = await axios.get(url);
+        setResponse(response.data);
+      }
+      return x();
+    }
+    return setResponse(initVal);
+  }, []);
 
   const handleInputChange = useCallback(
     (e) => {
@@ -34,7 +34,7 @@ export function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setResponse([...response, inputs]);
+    localStorage.setItem("storeData", JSON.stringify([...response, inputs]));
     setTimeout(() => {
       setHiddenSpin(false);
     }, 1000);
@@ -45,8 +45,6 @@ export function Form() {
 
   return (
     <>
-      <Header />
-
       <form onSubmit={handleSubmit}>
         <div className="floating">
           <input
@@ -111,7 +109,6 @@ export function Form() {
         </div>
 
         <button
-          disabled={response.length > 3}
           hidden={hiddenSpin === false}
           className="button-register"
           type="submit"

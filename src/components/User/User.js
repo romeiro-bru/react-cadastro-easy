@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { Header } from "../Header/Header";
 import "./style.scss";
 
 export function User() {
@@ -23,7 +22,6 @@ export function User() {
 
   return (
     <>
-      <Header />
       <section className="user-data">
         <ul>
           {data.map((item, index) => (
@@ -34,11 +32,12 @@ export function User() {
               <p>{item.email}</p>
               <p>{item.cpf}</p>
               <p>{item.phone}</p>
+
+              <button onClick={handleRemove} className="button-delete">
+                Excluir cadastro
+              </button>
             </li>
           ))}
-          <button onClick={handleRemove} className="button-delete">
-            Excluir cadastro
-          </button>
         </ul>
         <button onClick={handleReturn} className="button-return">
           voltar
