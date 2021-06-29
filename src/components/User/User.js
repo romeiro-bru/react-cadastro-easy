@@ -16,9 +16,7 @@ export function User() {
     const filtered = items.filter((_, index) => index !== itemIndex);
     localStorage.setItem("storeData", JSON.stringify(filtered));
 
-    setTimeout(() => {
-      history.push("/");
-    }, 1000);
+    data.length === 1 && history.push("/");
   };
 
   const handleReturn = () => {
@@ -27,7 +25,7 @@ export function User() {
 
   return (
     <>
-      <section className="user-data">
+      <form className="user-data">
         <ul>
           {data.map((item, index) => (
             <li key={index}>
@@ -39,6 +37,7 @@ export function User() {
               <p>{item.phone}</p>
 
               <button
+                type="submit"
                 onClick={() => handleRemove(index)}
                 className="button-delete"
               >
@@ -50,7 +49,7 @@ export function User() {
         <button onClick={handleReturn} className="button-return">
           voltar
         </button>
-      </section>
+      </form>
     </>
   );
 }
