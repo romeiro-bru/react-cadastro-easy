@@ -39,7 +39,7 @@ export function Form() {
     }, 1000);
     setTimeout(() => {
       history.push("/userregister");
-    }, 2500);
+    }, 1500);
   };
 
   return (
