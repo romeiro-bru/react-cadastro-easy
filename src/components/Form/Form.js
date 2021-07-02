@@ -15,11 +15,11 @@ export function Form() {
   useEffect(() => {
     const initVal = JSON.parse(localStorage.getItem("storeData"));
     if (initVal === null) {
-      async function x() {
+      async function getData() {
         const response = await axios.get(url);
         setResponse(response.data);
       }
-      return x();
+      return getData();
     }
     return setResponse(initVal);
   }, []);
