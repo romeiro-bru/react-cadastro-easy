@@ -1,7 +1,9 @@
 ## Day Eleven / 30 days of React challenge / Teste Front-end
 
-## Desafio :space_invader: 
-O app contém duas páginas, uma que exibe um formulário com os campos de input e a outra exibe os dados cadastrados. Os dados são armazenados no localStorage.
+## Features :space_invader: 
+* Preencher o formulário
+* Visualizar dados cadastrados
+* Os dados são armazenados no localstorage
 
 ## Tecnologias :mag_right:
 * React :atom:
