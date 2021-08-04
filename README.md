@@ -9,7 +9,7 @@ O objetivo é criar um simples app que deve conter duas páginas, uma que exibe 
 * LocalStorage :notebook:
 
 ### Instalação 👨‍🏭
-<br>
+
 É necessário ter instalado <strong>Node.js</strong>,<strong>Git</strong>, <strong>Yarn</strong> 
 <br>
 <br>
