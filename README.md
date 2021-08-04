@@ -9,11 +9,15 @@ O objetivo é criar um simples app que deve conter duas páginas, uma que exibe 
 * LocalStorage :notebook:
 
 ### Instalação 👨‍🏭
-Você precisa ter instalado Node.js ,Git , Yarn 
 <br>
+É necessário ter instalado <strong>Node.js</strong>,<strong>Git</strong>, <strong>Yarn</strong> 
+<br>
+<br>
+
 ```git clone https://github.com/romeiro-bru/react-cadastro-easy.git```
 
 Instalar dependências
+<br>
 <br>
 ```yarn install```
 
