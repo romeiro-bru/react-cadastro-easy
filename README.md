@@ -7,7 +7,7 @@
 ![Screenshot from 2021-08-03 22-05-31](https://user-images.githubusercontent.com/56081906/128105680-6c23b680-dd9a-41d4-b46e-751937fa7dc4.png)
 
 
-## Features :space_invader: 
+## Funcionalidades :space_invader: 
 * Preencher o formulário
 * Visualizar dados cadastrados
 
@@ -16,16 +16,25 @@
 * SCSS :nail_care::sparkles:
 * LocalStorage :notebook:
 
-## Instalação 👨‍🏭
 
-É necessário ter instalado <strong>Node.js</strong>,<strong>Git</strong>, <strong>Yarn</strong> 
-<br>
-<br>
+## Instalação / Inicialização 👨‍🏭
 
+É necessário ter instalado <strong>[Node.js](https://nodejs.org/en/download/)</strong>, 
+                           <strong>[Git](https://git-scm.com/downloads)</strong>, 
+                           <strong>[Yarn](https://yarnpkg.com/)</strong>.
+<br>
 ```git clone https://github.com/romeiro-bru/react-cadastro-easy.git```
 
 Instalar dependências
 <br>
-<br>
 ```yarn install```
+
+Execute o seguinte comando para iniciar a aplicação num ambiente de desenvolvimento:
+<br>
+```yarn start```
+<br>
+
+No navegador, introduza:
+<br>
+```http://localhost:3000```
 
