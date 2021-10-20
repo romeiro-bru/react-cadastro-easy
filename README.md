@@ -16,7 +16,18 @@
 * SCSS :nail_care::sparkles:
 * LocalStorage :notebook:
 
+## Links
+* [localStorage](https://www.w3schools.com/jsreF/prop_win_localstorage.asp)
+* [useHistory](https://reactrouter.com/web/api/Hooks/usehistory)
 
+## O que aprendi
+* Como salvar dados no localStorage
+
+```javascript
+    localStorage.setItem("storeData", JSON.stringify([...response, inputs]))
+```
+
+<br>
 
 ## Instalação / Inicialização 👨‍🏭
 
