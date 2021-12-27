@@ -1,5 +1,12 @@
 ## Teste Front-end React
 
+<p>
+  <img  src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"  height="25" alt="html">
+  <img  src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"  height="25" alt="sass">
+  <img  src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"  height="25" alt="react">
+</p>
+
+
 > A aplicação permite fazer cadastro, visualizar e excluir os dados cadastrados.
 > <br>
 >  Os dados são armazenados no LocalStorage.
